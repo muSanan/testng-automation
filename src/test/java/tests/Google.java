@@ -21,6 +21,7 @@ public class Google {
         String tittle = Driver.getDriver().getTitle();
         Assert.assertTrue("Tittle failed",tittle.contains(testData));
         Driver.quit();
+        System.out.println("Test");
 
     }
 
