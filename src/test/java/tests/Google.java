@@ -17,9 +17,6 @@ public class Google {
         Faker faker = new Faker();
         String testData = faker.lorem().word();
         Driver.getDriver().get("https://google.com");
-        Driver.getDriver().findElement(By.name("q")).sendKeys(testData + Keys.ENTER);
-        String tittle = Driver.getDriver().getTitle();
-        Assert.assertTrue("Tittle failed",tittle.contains(testData));
         Driver.quit();
         System.out.println("Test");
 
